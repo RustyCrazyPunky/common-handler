@@ -3,7 +3,7 @@ package com.mlt.api.common.handler.error.handlers;
 import com.mlt.api.common.domain.MltMessage;
 import com.mlt.api.common.domain.response.MltData;
 import com.mlt.api.common.domain.response.MltResponse;
-import com.mlt.api.common.handler.error.exception.MltNotFoundException;
+import com.mlt.api.common.handler.error.exception.notfound.MltNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.mlt.api.common.handler.error.exception;
+package com.mlt.api.common.handler.error.exception.notfound;
 
 import com.mlt.api.common.handler.error.enums.NotFoundCodeEnum;
 import lombok.Getter;

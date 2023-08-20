@@ -1,4 +1,4 @@
-package com.mlt.api.common.handler.error.exception;
+package com.mlt.api.common.handler.error.exception.validation;
 
 import lombok.Getter;
 
