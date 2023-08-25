@@ -8,6 +8,7 @@ public class IdsNotFoundException extends RuntimeException {
     private final String field;
 
     private IdsNotFoundException(String field, List<String> values) {
+        super("Ids not found for values: " + field + " " + values);
         this.field = field;
         this.values = values;
     }

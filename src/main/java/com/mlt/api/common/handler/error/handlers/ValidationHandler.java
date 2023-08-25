@@ -3,6 +3,7 @@ package com.mlt.api.common.handler.error.handlers;
 import com.mlt.api.common.domain.MltMessage;
 import com.mlt.api.common.domain.response.MltData;
 import com.mlt.api.common.domain.response.MltResponse;
+import com.mlt.api.common.handler.error.exception.validation.CategoryExistsException;
 import com.mlt.api.common.handler.error.exception.validation.IdsNotFoundException;
 import com.mlt.api.common.handler.error.exception.validation.IdsNotMatchException;
 import lombok.extern.slf4j.Slf4j;
@@ -47,5 +48,14 @@ public class ValidationHandler {
                                               .build());
     }
 
+    @ExceptionHandler(CategoryExistsException.class)
+    public ResponseEntity<MltResponse<MltData>> handleCategoryExistsException(CategoryExistsException exception) {
+        log.error("Category exists: ", exception);
+        return ResponseEntity.badRequest()
+                             .body(MltResponse.builder()
+                                              .error(MltMessage.builder().message(exception.getMessage()).build())
+                                              .build());
 
+
+    }
 }
